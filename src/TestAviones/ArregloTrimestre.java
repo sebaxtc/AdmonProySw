@@ -8,7 +8,7 @@ private int indice;
  
 //constructores
 public ArregloTrimestre(int min){
-     arreglo = new TrimestreNacional[min];
+         arreglo = new TrimestreNacional[min];
 	 indice = -1;
  }
  
@@ -17,9 +17,25 @@ public ArregloTrimestre(int min){
     return(indice < (arreglo.length -1));
  }
  
-public void Insertar(TrimestreNacional dato){
-  indice++;
-  arreglo[indice] = dato;
+public boolean Insertar(){
+    int NumTrim,Distancia,Pasajeros;
+    String Destinos;
+    if(ValidaEspacio()){
+    indice++;
+    TrimestreNacional trim = new TrimestreNacional();
+    NumTrim = Destino.CapturaNumTrimestre();
+    trim.setTrimestre(NumTrim);
+    Distancia = Destino.CapturaDistancia();
+    trim.setDistancia(Distancia);
+    Pasajeros = Destino.CapturaPasajeros();
+    trim.setPasajeros(Pasajeros);
+    Destinos = Destino.CapturaDestino();
+    trim.setDestino(Destinos);
+    arreglo[indice] = trim;
+    return true;
+    }
+    else
+    return false;
 }
 
 public boolean ValidaDatos(){
