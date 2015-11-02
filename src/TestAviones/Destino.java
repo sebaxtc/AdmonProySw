@@ -6,7 +6,7 @@ public class Destino extends javax.swing.JFrame {
     
     static int opcion=0;
     TestAviones test = new TestAviones();
-    static boolean evaluar; 
+    static boolean evaluar,evalua; 
     
     public Destino() {
         getContentPane().setBackground(new java.awt.Color(255,255,255));
@@ -83,6 +83,19 @@ public class Destino extends javax.swing.JFrame {
         bt19 = new java.awt.Button();
         bt20 = new java.awt.Button();
         jLabel13 = new javax.swing.JLabel();
+        jp9 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        tx15 = new java.awt.TextField();
+        jLabel20 = new javax.swing.JLabel();
+        tx16 = new java.awt.TextField();
+        jLabel21 = new javax.swing.JLabel();
+        tx17 = new java.awt.TextField();
+        jLabel22 = new javax.swing.JLabel();
+        tx18 = new java.awt.TextField();
+        bt21 = new java.awt.Button();
+        bt22 = new java.awt.Button();
+        bt23 = new java.awt.Button();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(255, 255, 255));
@@ -434,6 +447,11 @@ public class Destino extends javax.swing.JFrame {
         jp8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 240, 50));
 
         tx10.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        tx10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tx10ActionPerformed(evt);
+            }
+        });
         jp8.add(tx10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 210, 40));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -493,6 +511,77 @@ public class Destino extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\Aviones\\src\\TestAviones\\Trim. Nac..PNG")); // NOI18N
         jp8.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 610));
 
+        jp9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel19.setText("NUMERO DE TRIMESTRE:");
+        jp9.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 240, 50));
+
+        tx15.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        tx15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tx15ActionPerformed(evt);
+            }
+        });
+        jp9.add(tx15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 210, 40));
+
+        jLabel20.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel20.setText("DESTINO:");
+        jp9.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 100, 40));
+
+        tx16.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jp9.add(tx16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 210, 40));
+
+        jLabel21.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel21.setText("DISTANCIA DE MEXICO AL DESTIINO:");
+        jp9.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 340, 40));
+
+        tx17.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jp9.add(tx17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 210, 40));
+
+        jLabel22.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel22.setText("NUMERO DE PASAJEROS:");
+        jp9.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 240, 50));
+
+        tx18.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jp9.add(tx18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 210, 40));
+
+        bt21.setBackground(new java.awt.Color(0, 0, 0));
+        bt21.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        bt21.setForeground(new java.awt.Color(255, 255, 255));
+        bt21.setLabel("CAPTURAR DATOS");
+        bt21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt21ActionPerformed(evt);
+            }
+        });
+        jp9.add(bt21, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 190, 40));
+
+        bt22.setBackground(new java.awt.Color(0, 0, 0));
+        bt22.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt22.setForeground(new java.awt.Color(255, 255, 255));
+        bt22.setLabel("MENU");
+        bt22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt22ActionPerformed(evt);
+            }
+        });
+        jp9.add(bt22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 540, 110, 40));
+
+        bt23.setBackground(new java.awt.Color(0, 0, 0));
+        bt23.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt23.setForeground(new java.awt.Color(255, 255, 255));
+        bt23.setLabel("SALIR");
+        bt23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt23ActionPerformed(evt);
+            }
+        });
+        jp9.add(bt23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 80, 40));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Trim. Inter..PNG")); // NOI18N
+        jp9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 610));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -533,6 +622,11 @@ public class Destino extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -571,6 +665,11 @@ public class Destino extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -819,12 +918,16 @@ public class Destino extends javax.swing.JFrame {
     else{
          if((isNumeric(tx10.getText())) && (isNumeric(tx13.getText())) && (isNumeric(tx14.getText()))){
                 if(Integer.parseInt(tx10.getText()) >=1 && Integer.parseInt(tx10.getText()) <=4){
+                        evalua = test.Insertar();
+                        if(evalua == true){
                         JOptionPane.showMessageDialog(null,"Datos Capturados", "AVISO",JOptionPane.PLAIN_MESSAGE);
                         tx10.setText("");
                         tx11.setText("");
                         tx13.setText("");
                         tx14.setText("");
-                                                                                                }
+                        }
+                        else
+                            JOptionPane.showMessageDialog(null,"No hay espacio en el arreglo", "AVISO",JOptionPane.PLAIN_MESSAGE);                                                               }
                 else
                     JOptionPane.showMessageDialog(null,"Los trimestres unicamente son 4", "AVISO",JOptionPane.PLAIN_MESSAGE);
                                                                                                       }
@@ -841,6 +944,47 @@ public class Destino extends javax.swing.JFrame {
     private void bt20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt20ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_bt20ActionPerformed
+
+    private void tx10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tx10ActionPerformed
+
+    private void tx15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx15ActionPerformed
+   
+    }//GEN-LAST:event_tx15ActionPerformed
+
+    private void bt21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt21ActionPerformed
+    if(("".compareTo(tx15.getText()) == 0) || ("".compareTo(tx16.getText()) == 0) || ("".compareTo(tx17.getText()) == 0) || ("".compareTo(tx18.getText()) == 0))
+            JOptionPane.showMessageDialog(null, "Todos los campos deben estar llenos", "AVISO",JOptionPane.PLAIN_MESSAGE);
+    else{
+         if((isNumeric(tx15.getText())) && (isNumeric(tx17.getText())) && (isNumeric(tx18.getText()))){
+                if(Integer.parseInt(tx15.getText()) >=1 && Integer.parseInt(tx15.getText()) <=4){
+                        evalua = test.InsertaInter();
+                        if(evalua == true){
+                        JOptionPane.showMessageDialog(null,"Datos Capturados", "AVISO",JOptionPane.PLAIN_MESSAGE);
+                        tx15.setText("");
+                        tx16.setText("");
+                        tx17.setText("");
+                        tx18.setText("");
+                        }
+                        else
+                            JOptionPane.showMessageDialog(null,"No hay espacio en el arreglo", "AVISO",JOptionPane.PLAIN_MESSAGE);                                                               }
+                else
+                    JOptionPane.showMessageDialog(null,"Los trimestres unicamente son 4", "AVISO",JOptionPane.PLAIN_MESSAGE);
+                                                                                                      }
+         else
+            JOptionPane.showMessageDialog(null,"Hay algunos campos que no contienen valores numericos", "AVISO",JOptionPane.PLAIN_MESSAGE);                                                                                              
+        }    
+    }//GEN-LAST:event_bt21ActionPerformed
+
+    private void bt22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt22ActionPerformed
+        jp9.setVisible(false);     
+        jp2.setVisible(true);
+    }//GEN-LAST:event_bt22ActionPerformed
+
+    private void bt23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt23ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_bt23ActionPerformed
         
     
     
@@ -916,7 +1060,7 @@ public class Destino extends javax.swing.JFrame {
 //DATOS PARA TRIMESTRE NACIONAL
     public static int CapturaNumTrimestre(){
     int numero=0;    
-        if(Integer.parseInt(tx10.getText()) >=1 && Integer.parseInt(tx10.getText()) <=4)
+        if(Integer.parseInt(tx10.getText()) >=1 && Integer.parseInt(tx10.getText()) <=4 && isNumeric(tx10.getText()))
         numero = Integer.parseInt(tx10.getText());
     return numero;
     }
@@ -942,6 +1086,37 @@ public class Destino extends javax.swing.JFrame {
         pasajero = Integer.parseInt(tx14.getText());
     return pasajero;
     } 
+
+       
+//DATOS PARA TRIMESTRE NACIONAL
+   public static int CapturaNumTrimestreInter(){
+    int numero=0;    
+        if(Integer.parseInt(tx15.getText()) >=1 && Integer.parseInt(tx15.getText()) <=4 && isNumeric(tx15.getText()))
+        numero = Integer.parseInt(tx15.getText());
+    return numero;
+    }
+    
+    public static String CapturaDestinoInter(){
+    String destino = "";    
+        if(!("".equals(tx16.getText())))
+        destino = tx16.getText();
+    return destino;
+    }    
+    
+    public static int CapturaDistanciaInter(){
+    int distancia = 0;    
+        if(isNumeric(tx17.getText()))
+        distancia = Integer.parseInt(tx17.getText());
+    return distancia;
+    } 
+    
+    
+    public static int CapturaPasajerosInter(){
+    int pasajero = 0;    
+        if(isNumeric(tx18.getText()))
+        pasajero = Integer.parseInt(tx18.getText());
+    return pasajero;
+    } 
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -957,6 +1132,9 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.Button bt18;
     public static java.awt.Button bt19;
     public static java.awt.Button bt20;
+    public static java.awt.Button bt21;
+    public static java.awt.Button bt22;
+    public static java.awt.Button bt23;
     public static java.awt.Button bt3;
     public static java.awt.Button bt4;
     public static java.awt.Button bt5;
@@ -974,7 +1152,12 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel15;
     public static javax.swing.JLabel jLabel16;
     public static javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    public static javax.swing.JLabel jLabel19;
     public static javax.swing.JLabel jLabel2;
+    public static javax.swing.JLabel jLabel20;
+    public static javax.swing.JLabel jLabel21;
+    public static javax.swing.JLabel jLabel22;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel5;
@@ -992,6 +1175,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JPanel jp6;
     public static javax.swing.JPanel jp7;
     public static javax.swing.JPanel jp8;
+    public static javax.swing.JPanel jp9;
     public static javax.swing.JTextArea jtxa1;
     public static java.awt.Label label1;
     public static javax.swing.JLabel lb1;
@@ -1003,6 +1187,10 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.TextField tx12;
     public static java.awt.TextField tx13;
     public static java.awt.TextField tx14;
+    public static java.awt.TextField tx15;
+    public static java.awt.TextField tx16;
+    public static java.awt.TextField tx17;
+    public static java.awt.TextField tx18;
     public static java.awt.TextField tx2;
     public static java.awt.TextField tx3;
     public static java.awt.TextField tx4;
