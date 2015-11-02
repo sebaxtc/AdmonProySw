@@ -1,7 +1,5 @@
 package TestAviones;
 
-import java.util.*;
-
 class ArregloInternacional{
  
 //atributos
@@ -27,9 +25,25 @@ System.out.println("\n\tNo hay Elementos");
 return false;      }
 }
  
-public void Insertar(TrimestreInternacional dato){
-  indice++;
-  arreglo[indice] = dato;
+public boolean Insertar(){
+    int NumTrim,Distancia,Pasajeros;
+    String Destinos;
+    if(ValidaEspacio()){
+    indice++;
+    TrimestreInternacional trim = new TrimestreInternacional();
+    NumTrim = Destino.CapturaNumTrimestreInter();
+    trim.setTrimestre(NumTrim);
+    Distancia = Destino.CapturaDistanciaInter();
+    trim.setDistancia(Distancia);
+    Pasajeros = Destino.CapturaPasajerosInter();
+    trim.setPasajeros(Pasajeros);
+    Destinos = Destino.CapturaDestinoInter();
+    trim.setDestino(Destinos);
+    arreglo[indice] = trim;
+    return true;
+    }
+    else
+    return false;
  }
  
  //Busca un elemento en el arreglo
