@@ -96,6 +96,26 @@ public class Destino extends javax.swing.JFrame {
         bt22 = new java.awt.Button();
         bt23 = new java.awt.Button();
         jLabel18 = new javax.swing.JLabel();
+        jp10 = new javax.swing.JPanel();
+        label2 = new java.awt.Label();
+        tx19 = new java.awt.TextField();
+        bt24 = new java.awt.Button();
+        bt25 = new java.awt.Button();
+        jLabel24 = new javax.swing.JLabel();
+        jp11 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        tx20 = new java.awt.TextField();
+        bt26 = new java.awt.Button();
+        bt28 = new java.awt.Button();
+        bt29 = new java.awt.Button();
+        jLabel23 = new javax.swing.JLabel();
+        jp12 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        tx21 = new java.awt.TextField();
+        bt27 = new java.awt.Button();
+        bt30 = new java.awt.Button();
+        bt31 = new java.awt.Button();
+        jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(255, 255, 255));
@@ -200,6 +220,11 @@ public class Destino extends javax.swing.JFrame {
 
         tx12.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         tx12.setForeground(new java.awt.Color(0, 0, 204));
+        tx12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tx12ActionPerformed(evt);
+            }
+        });
         tx12.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 tx12KeyPressed(evt);
@@ -582,11 +607,147 @@ public class Destino extends javax.swing.JFrame {
         jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Trim. Inter..PNG")); // NOI18N
         jp9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 610));
 
+        jp10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        label2.setForeground(new java.awt.Color(0, 0, 153));
+        label2.setText("OPCION:");
+        jp10.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, 110, 40));
+
+        tx19.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        tx19.setForeground(new java.awt.Color(0, 0, 204));
+        tx19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tx19ActionPerformed(evt);
+            }
+        });
+        tx19.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tx19KeyPressed(evt);
+            }
+        });
+        jp10.add(tx19, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 540, 60, 40));
+
+        bt24.setBackground(new java.awt.Color(0, 0, 0));
+        bt24.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt24.setForeground(new java.awt.Color(255, 255, 255));
+        bt24.setLabel("SALIR");
+        bt24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt24ActionPerformed(evt);
+            }
+        });
+        jp10.add(bt24, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 80, 40));
+
+        bt25.setBackground(new java.awt.Color(0, 0, 0));
+        bt25.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt25.setForeground(new java.awt.Color(255, 255, 255));
+        bt25.setLabel("MENU");
+        bt25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt25ActionPerformed(evt);
+            }
+        });
+        jp10.add(bt25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 110, 40));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Opciones. Bus. Dest.png")); // NOI18N
+        jp10.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 610));
+
+        jp11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel25.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
+        jLabel25.setText("DAME EL NOMBRE DEL DESTINO:");
+        jp11.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 330, 40));
+
+        tx20.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jp11.add(tx20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 230, 50));
+
+        bt26.setBackground(new java.awt.Color(0, 0, 0));
+        bt26.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        bt26.setForeground(new java.awt.Color(255, 255, 255));
+        bt26.setLabel("BUSCAR");
+        bt26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt26ActionPerformed(evt);
+            }
+        });
+        jp11.add(bt26, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 110, 40));
+
+        bt28.setBackground(new java.awt.Color(0, 0, 0));
+        bt28.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt28.setForeground(new java.awt.Color(255, 255, 255));
+        bt28.setLabel("MENU");
+        bt28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt28ActionPerformed(evt);
+            }
+        });
+        jp11.add(bt28, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 540, 110, 40));
+
+        bt29.setBackground(new java.awt.Color(0, 0, 0));
+        bt29.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt29.setForeground(new java.awt.Color(255, 255, 255));
+        bt29.setLabel("SALIR");
+        bt29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt29ActionPerformed(evt);
+            }
+        });
+        jp11.add(bt29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 80, 40));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Bus. Dest..PNG")); // NOI18N
+        jp11.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
+
+        jp12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
+        jLabel27.setText("DAME EL NOMBRE DEL DESTINO:");
+        jp12.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 330, 40));
+
+        tx21.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jp12.add(tx21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 230, 50));
+
+        bt27.setBackground(new java.awt.Color(0, 0, 0));
+        bt27.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        bt27.setForeground(new java.awt.Color(255, 255, 255));
+        bt27.setLabel("BUSCAR");
+        bt27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt27ActionPerformed(evt);
+            }
+        });
+        jp12.add(bt27, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 110, 40));
+
+        bt30.setBackground(new java.awt.Color(0, 0, 0));
+        bt30.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt30.setForeground(new java.awt.Color(255, 255, 255));
+        bt30.setLabel("MENU");
+        bt30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt30ActionPerformed(evt);
+            }
+        });
+        jp12.add(bt30, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 540, 110, 40));
+
+        bt31.setBackground(new java.awt.Color(0, 0, 0));
+        bt31.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        bt31.setForeground(new java.awt.Color(255, 255, 255));
+        bt31.setLabel("SALIR");
+        bt31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt31ActionPerformed(evt);
+            }
+        });
+        jp12.add(bt31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 80, 40));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Bus. Dest..PNG")); // NOI18N
+        jp12.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 610));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp1, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
+            .addComponent(jp1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -626,11 +787,26 @@ public class Destino extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jp11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp1, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
+            .addComponent(jp1, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -670,6 +846,21 @@ public class Destino extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(11, 11, 11)
+                    .addComponent(jp11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(11, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -985,6 +1176,77 @@ public class Destino extends javax.swing.JFrame {
     private void bt23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt23ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_bt23ActionPerformed
+
+    private void tx19KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tx19KeyPressed
+     int key=evt.getKeyCode();
+         if(key == KeyEvent.VK_ENTER){
+            if((isNumeric(tx19.getText()))){
+                switch (Integer.parseInt(tx19.getText())) {
+                
+                case 1:
+                        tx19.setText("");
+                        OcultaPanel();
+                        jp11.setVisible(true);
+                break;
+                    
+                    
+                    
+                    
+                case 2:
+                        tx19.setText("");
+                        OcultaPanel();
+                        jp12.setVisible(true);   
+                break;
+                    
+                default:
+                        JOptionPane.showMessageDialog(null,"Esa opcion no existe", "AVISO",JOptionPane.PLAIN_MESSAGE);
+                break;
+                }
+            }             
+         }
+    }//GEN-LAST:event_tx19KeyPressed
+
+    private void tx19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx19ActionPerformed
+    }//GEN-LAST:event_tx19ActionPerformed
+
+    private void tx12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx12ActionPerformed
+
+    }//GEN-LAST:event_tx12ActionPerformed
+
+    private void bt24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt24ActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_bt24ActionPerformed
+
+    private void bt25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt25ActionPerformed
+         jp10.setVisible(false);     
+         jp2.setVisible(true);
+    }//GEN-LAST:event_bt25ActionPerformed
+
+    private void bt26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt26ActionPerformed
+       
+    }//GEN-LAST:event_bt26ActionPerformed
+
+    private void bt27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt27ActionPerformed
+    
+    }//GEN-LAST:event_bt27ActionPerformed
+
+    private void bt28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt28ActionPerformed
+         jp11.setVisible(false);     
+         jp2.setVisible(true);        
+    }//GEN-LAST:event_bt28ActionPerformed
+
+    private void bt29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt29ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_bt29ActionPerformed
+
+    private void bt30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt30ActionPerformed
+        jp12.setVisible(false);     
+        jp2.setVisible(true);       
+    }//GEN-LAST:event_bt30ActionPerformed
+
+    private void bt31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt31ActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_bt31ActionPerformed
         
     
     
@@ -1135,7 +1397,15 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.Button bt21;
     public static java.awt.Button bt22;
     public static java.awt.Button bt23;
+    public static java.awt.Button bt24;
+    public static java.awt.Button bt25;
+    public static java.awt.Button bt26;
+    public static java.awt.Button bt27;
+    public static java.awt.Button bt28;
+    public static java.awt.Button bt29;
     public static java.awt.Button bt3;
+    public static java.awt.Button bt30;
+    public static java.awt.Button bt31;
     public static java.awt.Button bt4;
     public static java.awt.Button bt5;
     public static java.awt.Button bt6;
@@ -1158,6 +1428,11 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel20;
     public static javax.swing.JLabel jLabel21;
     public static javax.swing.JLabel jLabel22;
+    public static javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    public static javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    public static javax.swing.JLabel jLabel27;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel5;
@@ -1168,6 +1443,9 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JLabel jlb1;
     public static javax.swing.JPanel jp1;
+    public static javax.swing.JPanel jp10;
+    public static javax.swing.JPanel jp11;
+    public static javax.swing.JPanel jp12;
     public static javax.swing.JPanel jp2;
     public static javax.swing.JPanel jp3;
     public static javax.swing.JPanel jp4;
@@ -1178,6 +1456,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JPanel jp9;
     public static javax.swing.JTextArea jtxa1;
     public static java.awt.Label label1;
+    public static java.awt.Label label2;
     public static javax.swing.JLabel lb1;
     public static javax.swing.JLabel lb2;
     public static javax.swing.JLabel lb3;
@@ -1191,7 +1470,10 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.TextField tx16;
     public static java.awt.TextField tx17;
     public static java.awt.TextField tx18;
+    public static java.awt.TextField tx19;
     public static java.awt.TextField tx2;
+    public static java.awt.TextField tx20;
+    public static java.awt.TextField tx21;
     public static java.awt.TextField tx3;
     public static java.awt.TextField tx4;
     public static java.awt.TextField tx5;
