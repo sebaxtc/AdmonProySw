@@ -6,7 +6,8 @@ public class TestAviones {
 
     ArregloAviones miarreglo = new ArregloAviones(20);
     ArregloTrimestre tuarreglo = new ArregloTrimestre(20);
-   
+    ArregloInternacional elarreglo = new ArregloInternacional(20);
+    
     public static void main(String[] args) {
     int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
     //int max = Destino.CapturarMax();
@@ -63,5 +64,18 @@ public class TestAviones {
             return 0;
     }
     
-   
+   //PARA TRIMESTRE INTERNACIONAL
+        public boolean Insertar(){
+        boolean valor;
+        valor = tuarreglo.Insertar();
+        return valor;
+    }
+    
+    //PARA TRIMESTRE INTERNACIONAL
+        public boolean InsertaInter(){
+        boolean valor;
+        valor = elarreglo.Insertar();
+        return valor;
+    }
+        
 }
