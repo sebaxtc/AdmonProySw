@@ -64,12 +64,16 @@ public class TestAviones {
             return 0;
     }
     
-   //PARA TRIMESTRE INTERNACIONAL
+   //PARA TRIMESTRE NACIONAL
         public boolean Insertar(){
         boolean valor;
         valor = tuarreglo.Insertar();
         return valor;
     }
+        
+        public void ImprimeNacional(){
+          tuarreglo.Imprime();
+    }        
     
     //PARA TRIMESTRE INTERNACIONAL
         public boolean InsertaInter(){
@@ -77,5 +81,9 @@ public class TestAviones {
         valor = elarreglo.Insertar();
         return valor;
     }
+        
+        public void ImprimeInternacional(){
+          elarreglo.Imprime();
+    }  
         
 }
