@@ -103,18 +103,16 @@ public class Destino extends javax.swing.JFrame {
         bt25 = new java.awt.Button();
         jLabel24 = new javax.swing.JLabel();
         jp11 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        tx20 = new java.awt.TextField();
-        bt26 = new java.awt.Button();
         bt28 = new java.awt.Button();
         bt29 = new java.awt.Button();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtxa2 = new javax.swing.JTextArea();
         jLabel23 = new javax.swing.JLabel();
         jp12 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        tx21 = new java.awt.TextField();
-        bt27 = new java.awt.Button();
         bt30 = new java.awt.Button();
         bt31 = new java.awt.Button();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jtxa3 = new javax.swing.JTextArea();
         jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -655,24 +653,6 @@ public class Destino extends javax.swing.JFrame {
 
         jp11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel25.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
-        jLabel25.setText("DAME EL NOMBRE DEL DESTINO:");
-        jp11.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 330, 40));
-
-        tx20.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jp11.add(tx20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 230, 50));
-
-        bt26.setBackground(new java.awt.Color(0, 0, 0));
-        bt26.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        bt26.setForeground(new java.awt.Color(255, 255, 255));
-        bt26.setLabel("BUSCAR");
-        bt26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt26ActionPerformed(evt);
-            }
-        });
-        jp11.add(bt26, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 110, 40));
-
         bt28.setBackground(new java.awt.Color(0, 0, 0));
         bt28.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
         bt28.setForeground(new java.awt.Color(255, 255, 255));
@@ -695,28 +675,24 @@ public class Destino extends javax.swing.JFrame {
         });
         jp11.add(bt29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 80, 40));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Bus. Dest..PNG")); // NOI18N
+        jScrollPane2.setBorder(new javax.swing.border.MatteBorder(null));
+        jScrollPane2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jScrollPane2.setOpaque(false);
+
+        jtxa2.setEditable(false);
+        jtxa2.setColumns(20);
+        jtxa2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jtxa2.setLineWrap(true);
+        jtxa2.setRows(5);
+        jtxa2.setToolTipText("");
+        jScrollPane2.setViewportView(jtxa2);
+
+        jp11.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 330, 320));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\List. Dest..PNG")); // NOI18N
         jp11.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
 
         jp12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel27.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
-        jLabel27.setText("DAME EL NOMBRE DEL DESTINO:");
-        jp12.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 330, 40));
-
-        tx21.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jp12.add(tx21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 230, 50));
-
-        bt27.setBackground(new java.awt.Color(0, 0, 0));
-        bt27.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        bt27.setForeground(new java.awt.Color(255, 255, 255));
-        bt27.setLabel("BUSCAR");
-        bt27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt27ActionPerformed(evt);
-            }
-        });
-        jp12.add(bt27, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, 110, 40));
 
         bt30.setBackground(new java.awt.Color(0, 0, 0));
         bt30.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
@@ -740,7 +716,21 @@ public class Destino extends javax.swing.JFrame {
         });
         jp12.add(bt31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 80, 40));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\Bus. Dest..PNG")); // NOI18N
+        jScrollPane3.setBorder(new javax.swing.border.MatteBorder(null));
+        jScrollPane3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jScrollPane3.setOpaque(false);
+
+        jtxa3.setEditable(false);
+        jtxa3.setColumns(20);
+        jtxa3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jtxa3.setLineWrap(true);
+        jtxa3.setRows(5);
+        jtxa3.setToolTipText("");
+        jScrollPane3.setViewportView(jtxa3);
+
+        jp12.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 330, 320));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\List. Dest..PNG")); // NOI18N
         jp12.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 610));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -856,7 +846,7 @@ public class Destino extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(11, 11, 11)
                     .addComponent(jp11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(11, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1137,7 +1127,7 @@ public class Destino extends javax.swing.JFrame {
     }//GEN-LAST:event_bt20ActionPerformed
 
     private void tx10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx10ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_tx10ActionPerformed
 
     private void tx15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx15ActionPerformed
@@ -1186,6 +1176,7 @@ public class Destino extends javax.swing.JFrame {
                 case 1:
                         tx19.setText("");
                         OcultaPanel();
+                        test.ImprimeNacional();
                         jp11.setVisible(true);
                 break;
                     
@@ -1195,6 +1186,7 @@ public class Destino extends javax.swing.JFrame {
                 case 2:
                         tx19.setText("");
                         OcultaPanel();
+                        test.ImprimeInternacional();
                         jp12.setVisible(true);   
                 break;
                     
@@ -1207,6 +1199,7 @@ public class Destino extends javax.swing.JFrame {
     }//GEN-LAST:event_tx19KeyPressed
 
     private void tx19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx19ActionPerformed
+
     }//GEN-LAST:event_tx19ActionPerformed
 
     private void tx12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tx12ActionPerformed
@@ -1221,14 +1214,6 @@ public class Destino extends javax.swing.JFrame {
          jp10.setVisible(false);     
          jp2.setVisible(true);
     }//GEN-LAST:event_bt25ActionPerformed
-
-    private void bt26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt26ActionPerformed
-       
-    }//GEN-LAST:event_bt26ActionPerformed
-
-    private void bt27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt27ActionPerformed
-    
-    }//GEN-LAST:event_bt27ActionPerformed
 
     private void bt28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt28ActionPerformed
          jp11.setVisible(false);     
@@ -1399,8 +1384,6 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.Button bt23;
     public static java.awt.Button bt24;
     public static java.awt.Button bt25;
-    public static java.awt.Button bt26;
-    public static java.awt.Button bt27;
     public static java.awt.Button bt28;
     public static java.awt.Button bt29;
     public static java.awt.Button bt3;
@@ -1430,9 +1413,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel22;
     public static javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    public static javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    public static javax.swing.JLabel jLabel27;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel5;
@@ -1441,6 +1422,8 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel8;
     public static javax.swing.JLabel jLabel9;
     public static javax.swing.JScrollPane jScrollPane1;
+    public static javax.swing.JScrollPane jScrollPane2;
+    public static javax.swing.JScrollPane jScrollPane3;
     public static javax.swing.JLabel jlb1;
     public static javax.swing.JPanel jp1;
     public static javax.swing.JPanel jp10;
@@ -1455,6 +1438,8 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JPanel jp8;
     public static javax.swing.JPanel jp9;
     public static javax.swing.JTextArea jtxa1;
+    public static javax.swing.JTextArea jtxa2;
+    public static javax.swing.JTextArea jtxa3;
     public static java.awt.Label label1;
     public static java.awt.Label label2;
     public static javax.swing.JLabel lb1;
@@ -1472,8 +1457,6 @@ public class Destino extends javax.swing.JFrame {
     public static java.awt.TextField tx18;
     public static java.awt.TextField tx19;
     public static java.awt.TextField tx2;
-    public static java.awt.TextField tx20;
-    public static java.awt.TextField tx21;
     public static java.awt.TextField tx3;
     public static java.awt.TextField tx4;
     public static java.awt.TextField tx5;
