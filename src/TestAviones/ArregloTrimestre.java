@@ -66,40 +66,24 @@ public void ListarDestino(int pos){
 		System.out.println("\n\tPasajeros: "+arreglo[pos].getPasajeros());    	
 }
 
+
 public void Imprime(){
-int i=0;
+int i,a,b;
     if(indice == -1)
-    System.out.println("\n\tNo hay Destinos");    	
+        Destino.jtxa2.setText("NO HAY DATOS");
 	else{
-System.out.println("\n\tTrimestre 1: Enero-Febrero-Marzo.\n\tTrimestre 2: Abril-Mayo-Junio.\n\tTrimestre 3: Julio-Agosto-Septiembre.\n\tTrimestre 4: Octubre-Noviembre-Diciembre."); 	
-    for(i=0 ; i <= indice ; i++){
-System.out.println("\n\tTrimestre: "+arreglo[i].getTrimestre()); 
-System.out.println("\n\tDestino: "+arreglo[i].getDestino());    
-System.out.println("\n\tDistancia de Mexico a "+arreglo[i].getDestino()+" :\t"+arreglo[i].getDistancia());
-System.out.println("\n\tPasajeros con destino a "+arreglo[i].getDestino()+ " en el Trimestre "+arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros());  
-                                }
-							                                                                                    }
+             Destino.jtxa2.setText("");
+             a = Destino.jtxa2.getCaretPosition();
+             Destino.jtxa2.insert("\n Trimestre 1: Enero-Febrero-Marzo.\n Trimestre 2: Abril-Mayo-Junio.\n Trimestre 3: Julio-Agosto-Septiembre.\n Trimestre 4: Octubre-Noviembre-Diciembre.",a); 
+             for(i=0 ; i <= indice ; i++){
+                b = Destino.jtxa2.getCaretPosition();
+                Destino.jtxa2.insert("\n Trimestre: " +arreglo[i].getTrimestre()+ "\n Destino: "+arreglo[i].getDestino()+ "\n Distancia de Mexico a " +arreglo[i].getDestino()+ ":  " +arreglo[i].getDistancia()+ "\n Pasajeros con destino a " +arreglo[i].getDestino()+ " en el Trimestre " +arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros(), b);                             
+					 }
+            }
 }
 
-public void GeneraNombres(int min){ 
-     int i=0,pasajeros,distancia,trimestre;
-	 String destino;
 
- String Destinos[]={"Cancun","Los Cabos","Acapulco","Guadalajara","Baja California","Hermosillo","Chiapas","Mazatlan","Veracruz","Tamaulipas","Sn. Luis Potosi","Cancun","Los Cabos","Acapulco","Guadalajara","Baja California","Hermosillo","Chiapas","Mazatlan","Veracruz","Tamaulipas","Sn. Luis Potosi","Cancun","Los Cabos","Acapulco","Guadalajara","Baja California","Hermosillo","Chiapas","Mazatlan","Veracruz","Tamaulipas","Sn. Luis Potosi"};	 
-		for(i=0 ; i < min ; i++){
-		  TrimestreNacional Tri = new TrimestreNacional();
-		  arreglo[i] = Tri;
-		  destino = Destinos[i];
-		  arreglo[i].setDestino(destino);
-		  pasajeros = (int)(Math.random()*(1000000-500000))+500000;
-		  arreglo[i].setPasajeros(pasajeros);
-		  distancia = (int)(Math.random()*(2000-1000))+1000;
-          arreglo[i].setDistancia(distancia);
-		  trimestre = (int)(Math.random()*(4-1))+1;
-          arreglo[i].setTrimestre(trimestre);
-              }   
-		  indice = indice + min;	  
-}
+
 
 public int PrimerTrimestre(){
     int x=1,z=0,y,i;
