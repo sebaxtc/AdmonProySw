@@ -1,4 +1,3 @@
-
 package TestAviones;
 
 public class ArregloAviones {
@@ -100,8 +99,6 @@ int asientos=0,i;
     asientos = asientos + arreglo[i].getAsientos();
                }
 return asientos;
-}    
-        
-    
+}       
     //prueba del comentario
 }
