@@ -67,40 +67,23 @@ public void ListarDestino(int pos){
  	
 }
 
+
+
 public void Imprime(){
-int i=0;
+int i,a,b;
     if(indice == -1)
-    System.out.println("\n\tNo hay Destinos");    	
+        Destino.jtxa3.setText("NO HAY DATOS");
 	else{
-System.out.println("\n\tTrimestre 1: Enero-Febrero-Marzo.\n\tTrimestre 2: Abril-Mayo-Junio.\n\tTrimestre 3: Julio-Agosto-Septiembre.\n\tTrimestre 4: Octubre-Noviembre-Diciembre."); 	
-    for(i=0 ; i<= indice ; i++){
-System.out.println("\n\tTrimestre: "+arreglo[i].getTrimestre()); 
-System.out.println("\n\tDestino: "+arreglo[i].getDestino());    
-System.out.println("\n\tDistancia de Mexico a "+arreglo[i].getDestino()+": "+arreglo[i].getDistancia());
-System.out.println("\n\tPasajeros con destino a "+arreglo[i].getDestino()+ " en el Trimestre "+arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros());  
-                                }
-								                                                                                     }
+             Destino.jtxa3.setText("");
+             a = Destino.jtxa3.getCaretPosition();
+             Destino.jtxa3.insert("\n Trimestre 1: Enero-Febrero-Marzo.\n Trimestre 2: Abril-Mayo-Junio.\n Trimestre 3: Julio-Agosto-Septiembre.\n Trimestre 4: Octubre-Noviembre-Diciembre.",a); 
+             for(i=0 ; i <= indice ; i++){
+                b = Destino.jtxa3.getCaretPosition();
+                Destino.jtxa3.insert("\n Trimestre: " +arreglo[i].getTrimestre()+ "\n Destino: "+arreglo[i].getDestino()+ "\n Distancia de Mexico a " +arreglo[i].getDestino()+ ":  " +arreglo[i].getDistancia()+ "\n Pasajeros con destino a " +arreglo[i].getDestino()+ " en el Trimestre " +arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros(), b);                             
+					 }
+            }
 }
 
-public void GeneraNombres(int min){ 
-     int i=0,pasajeros,distancia,trimestre;
-	 String destino;
-
- String Destinos[]={"Tokio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Tokio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Tokio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh"};	 
-		for(i=0 ; i < min ; i++){
-		  TrimestreInternacional Tri = new TrimestreInternacional();
-		  arreglo[i] = Tri;
-		  destino = Destinos[i];
-		  arreglo[i].setDestino(destino);
-		  pasajeros = (int)(Math.random()*(700000-300000))+300000;
-		  arreglo[i].setPasajeros(pasajeros);
-		  distancia = (int)(Math.random()*(20000-10000))+10000;
-          arreglo[i].setDistancia(distancia);
-		  trimestre = (int)(Math.random()*(4-1))+1;
-          arreglo[i].setTrimestre(trimestre);
-              }   
-		  indice = indice + min;	  
-}
 
 public int Primer(){
     int x=1,z=0,y,i;
