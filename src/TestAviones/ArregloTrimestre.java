@@ -45,26 +45,7 @@ else{
 System.out.println("\n\tNo hay Elementos");
 return false;      }
 }
- 
- //Busca un elemento en el arreglo
- public int BuscarDato(String desti){
-      int i=0;
-      String x,y;
-	        for(i=0 ; i <= indice ; i++){
-				y = arreglo[i].getDestino(); 
-   			    if(y.equals(desti))
-            return i;
-                                         }
-			return -1;			
-}
 
-public void ListarDestino(int pos){
-        System.out.println("\n\tSe ha encontrado el destino");
-        System.out.println("\n\tTrimestre: "+arreglo[pos].getTrimestre());
-		System.out.println("\n\tDestino: "+arreglo[pos].getDestino());
-		System.out.println("\n\tDistancia: "+arreglo[pos].getDistancia());
-		System.out.println("\n\tPasajeros: "+arreglo[pos].getPasajeros());    	
-}
 
 
 public void Imprime(){
