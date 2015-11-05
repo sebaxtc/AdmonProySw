@@ -42,7 +42,8 @@ public boolean ValidaDatos(){
 if(indice != -1){
 return true;       }
 else{
-System.out.println("\n\tNo hay Elementos");
+
+Destino.jtxa4.setText("\n NO HAY DATOS");
 return false;      }
 }
 
@@ -51,7 +52,7 @@ return false;      }
 public void Imprime(){
 int i,a,b;
     if(indice == -1)
-        Destino.jtxa2.setText("NO HAY DATOS");
+        Destino.jtxa2.setText("\n NO HAY DATOS");
 	else{
              Destino.jtxa2.setText("");
              a = Destino.jtxa2.getCaretPosition();
