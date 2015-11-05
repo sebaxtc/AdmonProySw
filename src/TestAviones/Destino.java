@@ -120,6 +120,10 @@ public class Destino extends javax.swing.JFrame {
         jp14 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         bt27 = new java.awt.Button();
+        jp15 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jtxa4 = new javax.swing.JTextArea();
+        jLabel28 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(255, 255, 255));
@@ -771,6 +775,25 @@ public class Destino extends javax.swing.JFrame {
         });
         jp14.add(bt27, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 550, 220, 40));
 
+        jp15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane4.setBorder(new javax.swing.border.MatteBorder(null));
+        jScrollPane4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jScrollPane4.setOpaque(false);
+
+        jtxa4.setEditable(false);
+        jtxa4.setColumns(20);
+        jtxa4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jtxa4.setLineWrap(true);
+        jtxa4.setRows(5);
+        jtxa4.setToolTipText("");
+        jScrollPane4.setViewportView(jtxa4);
+
+        jp15.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 330, 320));
+
+        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\NetBeansProjects\\AdminProy\\src\\TestAviones\\EstadisticasNac.PNG")); // NOI18N
+        jp15.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 620));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -840,6 +863,11 @@ public class Destino extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -907,6 +935,11 @@ public class Destino extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jp14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jp15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -1290,7 +1323,9 @@ public class Destino extends javax.swing.JFrame {
     }//GEN-LAST:event_bt31ActionPerformed
 
     private void bt26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt26ActionPerformed
-        // TODO add your handling code here:
+         OcultaPanel();
+         jp15.setVisible(true);
+         test.MostrarEstadisticasNacionales();
     }//GEN-LAST:event_bt26ActionPerformed
 
     private void bt27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt27ActionPerformed
@@ -1482,6 +1517,7 @@ public class Destino extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel5;
@@ -1492,6 +1528,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JScrollPane jScrollPane2;
     public static javax.swing.JScrollPane jScrollPane3;
+    public static javax.swing.JScrollPane jScrollPane4;
     public static javax.swing.JLabel jlb1;
     public static javax.swing.JPanel jp1;
     public static javax.swing.JPanel jp10;
@@ -1499,6 +1536,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JPanel jp12;
     private javax.swing.JPanel jp13;
     public static javax.swing.JPanel jp14;
+    public static javax.swing.JPanel jp15;
     public static javax.swing.JPanel jp2;
     public static javax.swing.JPanel jp3;
     public static javax.swing.JPanel jp4;
@@ -1510,6 +1548,7 @@ public class Destino extends javax.swing.JFrame {
     public static javax.swing.JTextArea jtxa1;
     public static javax.swing.JTextArea jtxa2;
     public static javax.swing.JTextArea jtxa3;
+    public static javax.swing.JTextArea jtxa4;
     public static java.awt.Label label1;
     public static java.awt.Label label2;
     public static javax.swing.JLabel lb1;
