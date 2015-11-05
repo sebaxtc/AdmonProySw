@@ -85,5 +85,30 @@ public class TestAviones {
         public void ImprimeInternacional(){
           elarreglo.Imprime();
     }  
+    
+    //PARA ESTADISTICAS NACIONALES
+        public void MostrarEstadisticasNacionales(){
+        int x1,x2,x3,x4,a;
+            
+        if(tuarreglo.ValidaDatos()){    
+	    x1 = tuarreglo.PrimerTrimestre();
+	    x2 = tuarreglo.SegundoTrimestre();
+	    x3 = tuarreglo.TercerTrimestre();
+	    x4 = tuarreglo.CuartoTrimestre();
+	    Destino.jtxa4.setText("\n Trimestres Nacionales");		
+            a = Destino.jtxa4.getCaretPosition();
+	    if(x1 > x2 && x1 > x3 && x1 > x4){
+                Destino.jtxa4.insert("\n El Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + x1 + " pasajeros",a);	        }
+            else{ 
+	    if(x2 > x1 && x2 > x3 && x2 > x4){
+            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Abr-May-Jun con: " + x2 + " pasajeros",a);          }
+	    else{	
+	    if(x3 > x1 && x3 > x2 && x3 > x4){
+            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x3 + " pasajeros",a);	   	    }
+	    else{
+	    if(x4 > x1 && x4 > x2 && x4 > x3){	
+            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x4 + " pasajeros",a);		    }
+	          } } } }//fin del if
+    }
         
 }
