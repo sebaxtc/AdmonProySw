@@ -7,9 +7,10 @@ public class TestAviones {
     ArregloAviones miarreglo = new ArregloAviones(20);
     ArregloTrimestre tuarreglo = new ArregloTrimestre(20);
     ArregloInternacional elarreglo = new ArregloInternacional(20);
+    int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1,x1,x2,x3,x4,y1, y2, y3,y4;
     
     public static void main(String[] args) {
-    int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
+   
     //int max = Destino.CapturarMax();
     //int min = Destino.CapturarMin();
     Destino window = new Destino();
@@ -88,7 +89,7 @@ public class TestAviones {
     
     //PARA ESTADISTICAS NACIONALES
         public void MostrarEstadisticasNacionales(){
-        int x1,x2,x3,x4,a;
+        int a;
             
         if(tuarreglo.ValidaDatos()){    
 	    x1 = tuarreglo.PrimerTrimestre();
@@ -111,9 +112,10 @@ public class TestAviones {
 	          } } } }//fin del if
     }
         
+        
         //PARA ESTADISTICAS INTERNACIONALES
         public void MostrarEstadisticasInter(){
-            int y1, y2, y3,y4,a;
+            int a;
             if(elarreglo.ValidaDatos()){ 
    	    y1 = elarreglo.Primer();
 	    y2 = elarreglo.Segundo();
