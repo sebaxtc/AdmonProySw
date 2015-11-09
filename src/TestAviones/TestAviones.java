@@ -111,4 +111,30 @@ public class TestAviones {
 	          } } } }//fin del if
     }
         
+        //PARA ESTADISTICAS INTERNACIONALES
+        public void MostrarEstadisticasInter(){
+            int y1, y2, y3,y4,a;
+            if(elarreglo.ValidaDatos()){ 
+   	    y1 = elarreglo.Primer();
+	    y2 = elarreglo.Segundo();
+		y3 = elarreglo.Tercer();
+		y4 = elarreglo.Cuarto();
+	    Destino.jtxa5.setText("\nTrimestres Internacionales");
+             a=Destino.jtxa5.getCaretPosition();
+	    if(y1 > y2 && y1 > y3 && y1 > y4){
+               
+            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + y1 + " pasajeros",a);	    }
+            else{ 
+	    if(y2 > y1 && y2 > y3 && y2 > y4){
+            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Abr-May-Jun con: " + y2 + " pasajeros",a);      }
+	    else{	
+	    if(y3 > y1 && y3 > y2 && y3 > y4){
+            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y3 + " pasajeros",a);	 	}
+	    else{
+	    if(y4 > y1 && y4 > y2 && y4 > y3){	
+            Destino.jtxa5.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y4 + " pasajeros",a);	    }
+	          } } } }//fin del if
+        
+}
+        
 }
