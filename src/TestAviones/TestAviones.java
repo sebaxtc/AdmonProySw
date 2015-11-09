@@ -110,11 +110,7 @@ public class TestAviones {
 	    if(x4 > x1 && x4 > x2 && x4 > x3){	
             Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x4 + " pasajeros",a);		    }
 	          } } } }//fin del if
-    }
     
-        public void RpksNacional(){
-        int a;
-        
         if(tuarreglo.ValidaDatos()){ 
 	x1 = tuarreglo.PasajerosTrimestreUno();
 	x2 = tuarreglo.PasajerosTrimestreDos();
@@ -139,9 +135,79 @@ public class TestAviones {
         a = Destino.jtxa4.getCaretPosition();
 	Destino.jtxa4.insert("\n Los RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
 	}
-        }
+        
+     	if(tuarreglo.ValidaDatos()){ 	
+	x2 = tuarreglo.DistanciaAno();
+	a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n Distancia Nacional",a);		
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tLa distancia total en el anio es: "+x2+" kilometros",a);	
+	}   
+        
+	if(miarreglo.ValidaDatos()){ 
+	    if(tuarreglo.ValidaDatos()){ 	
+	x1 = miarreglo.TotalAsientos();
+	y1 = tuarreglo.DistanciaTrimestreUno();
+	y2 = tuarreglo.DistanciaTrimestreDos();
+	y3 = tuarreglo.DistanciaTrimestreTres();
+	y4 = tuarreglo.DistanciaTrimestreCuatro();		
+	ASK1 = x1*y1;
+	ASK2 = x1*y2;
+	ASK3 = x1*y3;
+	ASK4 = x1*y4;
+	a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tASK's Nacionales",a);		
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tLos ASK's del 1er. Trimestre son: " +df.format(ASK1),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tLos ASK's del 2do. Trimestre son: " +df.format(ASK2),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tLos ASK's del 3er. Trimestre son: " +df.format(ASK3),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tLos ASK's del 4to. Trimestre son: " +df.format(ASK4),a);
+	}}
         
         
+	if(miarreglo.ValidaDatos()){ 
+	    if(tuarreglo.ValidaDatos()){ 
+	         if(elarreglo.ValidaDatos()){ 		
+	try{
+	Factor1 = RPK1/ASK1;
+	Factor2 = RPK2/ASK2;
+	Factor3 = RPK3/ASK3;
+	Factor4 = RPK4/ASK4;
+        a = Destino.jtxa4.getCaretPosition();
+	Destino.jtxa4.insert("\n\tFactor de Ocupacion Nacional",a);		
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 4to. Trimestre son: " +df.format(Factor4),a);
+	}
+	catch(ArithmeticException ae){
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tHay una division entre 0",a);			
+	}
+	}}}
+        
+        
+        if(tuarreglo.ValidaDatos()){ 
+	    if(elarreglo.ValidaDatos()){ 
+	pasajerosN = tuarreglo.PasajerosAno();
+	pasajerosI = elarreglo.PasajerosAno();	
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tPasajeros en todo el ano a nivel nacional: "+pasajerosN+" pasajeros",a);	
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n\tPasajeros en todo el ano a nivel internacional: "+pasajerosI+" pasajeros",a);	
+        a = Destino.jtxa4.getCaretPosition();
+	Destino.jtxa4.insert("\n\tPasajeros en todo el ano: "+(pasajerosN+pasajerosI)+" pasajeros",a);	
+	}}
+        
+        
+        }//FIN DE ESTADISTICAS
         
         
         //PARA ESTADISTICAS INTERNACIONALES
@@ -150,8 +216,8 @@ public class TestAviones {
             if(elarreglo.ValidaDatos()){ 
    	    y1 = elarreglo.Primer();
 	    y2 = elarreglo.Segundo();
-		y3 = elarreglo.Tercer();
-		y4 = elarreglo.Cuarto();
+	    y3 = elarreglo.Tercer();
+	    y4 = elarreglo.Cuarto();
 	    Destino.jtxa5.setText("\nTrimestres Internacionales");
              a=Destino.jtxa5.getCaretPosition();
 	    if(y1 > y2 && y1 > y3 && y1 > y4){
