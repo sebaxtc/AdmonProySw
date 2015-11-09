@@ -7,7 +7,11 @@ public class TestAviones {
     ArregloAviones miarreglo = new ArregloAviones(20);
     ArregloTrimestre tuarreglo = new ArregloTrimestre(20);
     ArregloInternacional elarreglo = new ArregloInternacional(20);
-    int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1,x1,x2,x3,x4,y1, y2, y3,y4;
+    int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
+    DecimalFormat df = new DecimalFormat("0.00000"); 
+    String avi,desti;
+    double Factor1,Factor2,Factor3,Factor4,RPK1=0,RPK2=0,RPK3=0,RPK4=0,RPK5=0,RPK6=0,RPK7=0,RPK8=0,ASK1=0,ASK2=0,ASK3=0,ASK4=0,ASK5=0,ASK6=0,ASK7=0,ASK8=0,x1,x2,x3,x4,y1,y2,y3,y4;
+ 
     
     public static void main(String[] args) {
    
@@ -19,10 +23,6 @@ public class TestAviones {
     window.setSize(737, 614);
     //ArregloAviones miarreglo = new ArregloAviones(Destino.CapturarMax());
     //Declaracion de variables locales
-    //String avi,desti;
-    //double Factor1,Factor2,Factor3,Factor4,RPK1=0,RPK2=0,RPK3=0,RPK4=0,RPK5=0,RPK6=0,RPK7=0,RPK8=0,ASK1=0,ASK2=0,ASK3=0,ASK4=0,ASK5=0,ASK6=0,ASK7=0,ASK8=0,x1,x2,x3,x4,y1,y2,y3,y4;
-    DecimalFormat df = new DecimalFormat("0.00000");  
-    
 
  }
     
@@ -111,6 +111,37 @@ public class TestAviones {
             Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x4 + " pasajeros",a);		    }
 	          } } } }//fin del if
     }
+    
+        public void RpksNacional(){
+        int a;
+        
+        if(tuarreglo.ValidaDatos()){ 
+	x1 = tuarreglo.PasajerosTrimestreUno();
+	x2 = tuarreglo.PasajerosTrimestreDos();
+	x3 = tuarreglo.PasajerosTrimestreTres();
+	x4 = tuarreglo.PasajerosTrimestreCuatro();
+	y1 = tuarreglo.DistanciaTrimestreUno();
+	y2 = tuarreglo.DistanciaTrimestreDos();
+	y3 = tuarreglo.DistanciaTrimestreTres();
+	y4 = tuarreglo.DistanciaTrimestreCuatro();	
+	RPK1 = x1*y1;
+	RPK2 = x2*y2;
+	RPK3 = x3*y3;
+	RPK4 = x4*y4;
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n RPK's Nacionales",a);    	
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n Los RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n Los RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
+        a = Destino.jtxa4.getCaretPosition();
+        Destino.jtxa4.insert("\n Los RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
+        a = Destino.jtxa4.getCaretPosition();
+	Destino.jtxa4.insert("\n Los RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
+	}
+        }
+        
+        
         
         
         //PARA ESTADISTICAS INTERNACIONALES
