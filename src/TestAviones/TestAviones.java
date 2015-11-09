@@ -209,15 +209,14 @@ public class TestAviones {
         
         }//FIN DE ESTADISTICAS
         
-        
         //PARA ESTADISTICAS INTERNACIONALES
         public void MostrarEstadisticasInter(){
             int a;
             if(elarreglo.ValidaDatos()){ 
    	    y1 = elarreglo.Primer();
 	    y2 = elarreglo.Segundo();
-	    y3 = elarreglo.Tercer();
-	    y4 = elarreglo.Cuarto();
+		y3 = elarreglo.Tercer();
+		y4 = elarreglo.Cuarto();
 	    Destino.jtxa5.setText("\nTrimestres Internacionales");
              a=Destino.jtxa5.getCaretPosition();
 	    if(y1 > y2 && y1 > y3 && y1 > y4){
@@ -233,7 +232,110 @@ public class TestAviones {
 	    if(y4 > y1 && y4 > y2 && y4 > y3){	
             Destino.jtxa5.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y4 + " pasajeros",a);	    }
 	          } } } }//fin del if
+            
+        if(elarreglo.ValidaDatos()){ 
+	x1 = elarreglo.PasajerosTrimestreUno();
+	x2 = elarreglo.PasajerosTrimestreDos();
+	x3 = elarreglo.PasajerosTrimestreTres();
+	x4 = elarreglo.PasajerosTrimestreCuatro();
+	y1 = elarreglo.DistanciaTrimestreUno();
+	y2 = elarreglo.DistanciaTrimestreDos();
+	y3 = elarreglo.DistanciaTrimestreTres();
+	y4 = elarreglo.DistanciaTrimestreCuatro();
+	RPK5 = x1*y1;
+	RPK6 = x2*y2;
+	RPK7 = x3*y3;
+	RPK8 = x4*y4;	
         
-}
+        a = Destino.jtxa5.getCaretPosition();
+        Destino.jtxa5.insert("\n RPK's Nacionales",a);    	
+        a = Destino.jtxa5.getCaretPosition();
+        Destino.jtxa5.insert("\n Los RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
+        a = Destino.jtxa5.getCaretPosition();
+        Destino.jtxa5.insert("\n Los RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
+        a = Destino.jtxa5.getCaretPosition();
+        Destino.jtxa5.insert("\n Los RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
+        a = Destino.jtxa5.getCaretPosition();
+	Destino.jtxa5.insert("\n Los RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
+            }  
+
+        
+        if(elarreglo.ValidaDatos()){ 	
+	x1 = elarreglo.DistanciaAno();
+        a = Destino.jtxa5.getCaretPosition();     
+        Destino.jtxa5.insert("\n\tDistancia Internacional",a);	
+        a = Destino.jtxa5.getCaretPosition();     
+        Destino.jtxa5.insert("\n\tLa distancia total en el anio es: "+x1+" kilometros",a);
+        
+	}
+        
+
+        if(miarreglo.ValidaDatos()){ 
+            
+            if(elarreglo.ValidaDatos()){ 	
+            x1 = miarreglo.TotalAsientos();
+            y1 = elarreglo.DistanciaTrimestreUno();
+            y2 = elarreglo.DistanciaTrimestreDos();
+            y3 = elarreglo.DistanciaTrimestreTres();
+            y4 = elarreglo.DistanciaTrimestreCuatro();
+            ASK5 = x1*y1;
+            ASK6 = x1*y2;
+            ASK7 = x1*y3;
+            ASK8 = x1*y4;	
+            
+    a = Destino.jtxa5.getCaretPosition();      
+    Destino.jtxa5.insert("\n\tASK's Internacionales",a);
+    
+    a = Destino.jtxa5.getCaretPosition();  
+    Destino.jtxa5.insert("\n\tLos ASK's del 1er. Trimestre son: " +df.format(ASK5),a);
+    
+    a = Destino.jtxa5.getCaretPosition();  
+    Destino.jtxa5.insert("\n\tLos ASK's del 2do. Trimestre son: " +df.format(ASK6),a);	
+
+    a = Destino.jtxa5.getCaretPosition();  
+    Destino.jtxa5.insert("\n\tLos ASK's del 3er. Trimestre son: " +df.format(ASK7),a );	
+    
+    a = Destino.jtxa5.getCaretPosition();  
+    Destino.jtxa5.insert("\n\tLos ASK's del 4to. Trimestre son: " +df.format(ASK8),a);		
+	
+	}}
+        
+     
+        if(miarreglo.ValidaDatos()){ 
+	    if(tuarreglo.ValidaDatos()){ 
+	         if(elarreglo.ValidaDatos()){ 	
+            try{
+        Factor1 = RPK5/ASK5;
+            Factor2 = RPK6/ASK6;
+            Factor3 = RPK7/ASK7;
+            Factor4 = RPK8/ASK8;
+            
+         a = Destino.jtxa5.getCaretPosition();         
+        Destino.jtxa5.insert("\n\tFactor de Ocupacion Internacional",a);
+         a = Destino.jtxa5.getCaretPosition();         
+        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);	
+         a = Destino.jtxa5.getCaretPosition();      
+        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);	
+         a = Destino.jtxa5.getCaretPosition();        
+       Destino.jtxa5.insert("\n\tEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);	
+         a = Destino.jtxa5.getCaretPosition();        
+        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 4to. Trimestre son: "+df.format(Factor4),a);	
+        
+            }
+            catch(ArithmeticException ae){
+        
+        a = Destino.jtxa5.getCaretPosition();         
+        Destino.jtxa5.insert("\n\tHay una division entre 0",a);		
+            }	    
+            }}}
+        
+        
+        
+        }        
+        
+        
+        
+        
+        
         
 }
