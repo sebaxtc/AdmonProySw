@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 public class TestAviones {    
 
-    ArregloAviones miarreglo = new ArregloAviones(20);
-    ArregloTrimestre tuarreglo = new ArregloTrimestre(20);
-    ArregloInternacional elarreglo = new ArregloInternacional(20);
+    ArregloAviones miarreglo = new ArregloAviones(30);
+    ArregloTrimestre tuarreglo = new ArregloTrimestre(30);
+    ArregloInternacional elarreglo = new ArregloInternacional(30);
     int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
     DecimalFormat df = new DecimalFormat("0.00000"); 
     String avi,desti;
@@ -23,7 +23,6 @@ public class TestAviones {
     window.setSize(737, 614);
     //ArregloAviones miarreglo = new ArregloAviones(Destino.CapturarMax());
     //Declaracion de variables locales
-
  }
     
     public boolean Inserta(){
@@ -271,7 +270,7 @@ public class TestAviones {
         
 
         if(miarreglo.ValidaDatos()){ 
-            
+             
             if(elarreglo.ValidaDatos()){ 	
             x1 = miarreglo.TotalAsientos();
             y1 = elarreglo.DistanciaTrimestreUno();
@@ -331,11 +330,6 @@ public class TestAviones {
         
         
         
-        }        
+        }
         
-        
-        
-        
-        
-        
-}
+}//FIN DE LA CLASE DESTINO
