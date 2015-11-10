@@ -4,10 +4,11 @@ public class ArregloAviones {
 
  //atributos
 Aviones [] arreglo;
-int indice;
+private int indice;
+private int tamano=30;
 
 //constructores
-public ArregloAviones(int tamano){
+public ArregloAviones(){
      arreglo = new Aviones[tamano];
      GeneraNombres();
  }
