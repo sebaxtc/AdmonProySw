@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 public class TestAviones {    
 
-    ArregloAviones miarreglo = new ArregloAviones(30);
-    ArregloTrimestre tuarreglo = new ArregloTrimestre(30);
-    ArregloInternacional elarreglo = new ArregloInternacional(30);
+    ArregloAviones miarreglo = new ArregloAviones();
+    ArregloTrimestre tuarreglo = new ArregloTrimestre();
+    ArregloInternacional elarreglo = new ArregloInternacional();
     int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
     DecimalFormat df = new DecimalFormat("0.00000"); 
     String avi,desti;
@@ -20,7 +20,7 @@ public class TestAviones {
     Destino window = new Destino();
     window.setTitle("Plan-E-AirLine");
     window.setVisible(true);
-    window.setSize(737, 614);
+    window.setSize(750, 650);
     //ArregloAviones miarreglo = new ArregloAviones(Destino.CapturarMax());
     //Declaracion de variables locales
  }
