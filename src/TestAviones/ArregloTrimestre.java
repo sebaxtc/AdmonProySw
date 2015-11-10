@@ -9,7 +9,7 @@ private int indice;
 //constructores
 public ArregloTrimestre(int min){
          arreglo = new TrimestreNacional[min];
-	 indice = -1;
+	 GeneraNombres();
  }
  
  //metodos
@@ -216,5 +216,27 @@ public int DistanciaTrimestreCuatro(){
 		                        }
     return Trimestre; 
 }
+
+
+public void GeneraNombres(){ 
+         int i,pasajeros,distancia,trimestre;
+	 String destino;
+
+ String Destinos[]={"Cancun","Los Cabos","Acapulco","Guadalajara","Baja California","Hermosillo","Chiapas","Mazatlan","Veracruz","Tamaulipas","Sn. Luis Potosi","Colima","Chetumal","Puerto Vallarta","Sierra Gorda","Huatulco","Leon","Nuevo Leon"};	 
+		for(i=0 ; i < 19 ; i++){
+		  TrimestreNacional Tri = new TrimestreNacional();
+		  arreglo[i] = Tri;
+		  destino = Destinos[i];
+		  arreglo[i].setDestino(destino);
+		  pasajeros = (int)(Math.random()*(1000000-500000))+500000;
+		  arreglo[i].setPasajeros(pasajeros);
+		  distancia = (int)(Math.random()*(2000-1000))+1000;
+          arreglo[i].setDistancia(distancia);
+		  trimestre = (int)(Math.random()*(4-1))+1;
+          arreglo[i].setTrimestre(trimestre);
+              }   
+		  indice = 18;	  
+}
+
 
 }
