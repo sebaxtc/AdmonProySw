@@ -9,7 +9,7 @@ int indice;
 //constructores
 public ArregloAviones(int tamano){
      arreglo = new Aviones[tamano];
-     indice = -1;
+     GeneraNombres();
  }
 
 
@@ -92,6 +92,34 @@ int i,a;
 }
 
 
+
+public void GeneraNombres(){ 
+         int i,capacidad,servicio,asientos;
+	 String nombre;
+	 
+	 String Nombre[]={"Boeing737-700","Boeing737-800","Boeing767-200ER","Boeing767-300ER","Boeing777-200ER","Boeing787-8","Embraer145","Embraer170","Embraer175","Embraer190","Embraer10","Embraer15","Embraer19"};
+         int Capacidad[]={124,160,174,209,290,243,50,76,86,99,60,45,67};
+	 
+		for(i=0 ; i < 13 ; i++){
+		  Aviones avion = new Aviones();
+		  arreglo[i] = avion;
+		  nombre = Nombre[i];
+		  arreglo[i].setNombre(nombre);
+		  capacidad = Capacidad[i];
+		  arreglo[i].setCapacidad(capacidad);
+		  servicio = (int)(Math.random()*(20-10))+10;
+                  arreglo[i].setServicio(servicio);
+		  asientos = capacidad * servicio;
+                  arreglo[i].setAsientos(asientos);		  
+		  }   
+		  indice = 12;
+} 
+
+
+
+
+
+
 public int TotalAsientos(){
 int asientos=0,i;
 
@@ -102,3 +130,4 @@ return asientos;
 }       
     //prueba del comentario
 }
+
