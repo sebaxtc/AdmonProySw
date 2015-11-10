@@ -5,10 +5,11 @@ class ArregloInternacional{
 //atributos
 private TrimestreInternacional [] arreglo;
 private int indice;
- 
+private int tamano=30;
+
 //constructores
-public ArregloInternacional(int min){
-     arreglo = new TrimestreInternacional[min];
+public ArregloInternacional(){
+     arreglo = new TrimestreInternacional[tamano];
      GeneraNombres();
  }
  
@@ -218,9 +219,9 @@ public int DistanciaTrimestreCuatro(){
 public void GeneraNombres(){ 
          int i,pasajeros,distancia,trimestre;
 	 String destino;
-         String Destinos[]={"Tokio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Osaka","Toronto","Monaco","Singapur","Camboya","Sao Paolo","Peru","Caracas","Irlanda","Orlando","Miami","Hawai"};	 
+         String Destinos[]={"Toio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Osaka","Toronto","Monaco","Singapur","Camboya","Sao Paolo","Peru","Caracas","Irlanda","Orlando","Miami","Hawai"};	 
          
-		for(i=0 ; i < 24 ; i++){
+		for(i=0 ; i < 23 ; i++){
 		  TrimestreInternacional Tri = new TrimestreInternacional();
 		  arreglo[i] = Tri;
 		  destino = Destinos[i];
@@ -232,7 +233,7 @@ public void GeneraNombres(){
 		  trimestre = (int)(Math.random()*(4-1))+1;
           arreglo[i].setTrimestre(trimestre);
                 }   
-		  indice = 23;	  
+		  indice = 22;	  
 }
 
 						   						   
