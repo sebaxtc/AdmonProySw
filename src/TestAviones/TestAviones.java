@@ -127,7 +127,7 @@ public class TestAviones {
 	RPK3 = x3*y3;
 	RPK4 = x4*y4;
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\nRPK's Nacionales",a);    	
+        Destino.jtxa4.insert("\n\nRPK's Nacionales",a);    	
         a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\nLos RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
         a = Destino.jtxa4.getCaretPosition();
@@ -141,7 +141,7 @@ public class TestAviones {
      	if(tuarreglo.ValidaDatos()){ 	
 	x2 = tuarreglo.DistanciaAno();
 	a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n Distancia Nacional",a);		
+        Destino.jtxa4.insert("\n\nDistancia Nacional",a);		
         a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\nLa distancia total en el anio es: "+x2+" kilometros",a);	
 	}   
@@ -158,7 +158,7 @@ public class TestAviones {
 	ASK3 = x1*y3;
 	ASK4 = x1*y4;
 	a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\nASK's Nacionales",a);		
+        Destino.jtxa4.insert("\n\nASK's Nacionales",a);		
         a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\nLos ASK's del 1er. Trimestre son: " +df.format(ASK1),a);
         a = Destino.jtxa4.getCaretPosition();
@@ -179,7 +179,7 @@ public class TestAviones {
 	Factor3 = RPK3/ASK3;
 	Factor4 = RPK4/ASK4;
         a = Destino.jtxa4.getCaretPosition();
-	Destino.jtxa4.insert("\nFactor de Ocupacion Nacional",a);		
+	Destino.jtxa4.insert("\n\nFactor de Ocupacion Nacional",a);		
         a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\nEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);
         a = Destino.jtxa4.getCaretPosition();
@@ -201,7 +201,7 @@ public class TestAviones {
 	pasajerosN = tuarreglo.PasajerosAno();
 	pasajerosI = elarreglo.PasajerosAno();	
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\nPasajeros en todo el ano a nivel nacional: "+pasajerosN+" pasajeros",a);	
+        Destino.jtxa4.insert("\n\nPasajeros en todo el ano a nivel nacional: "+pasajerosN+" pasajeros",a);	
         a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\nPasajeros en todo el ano a nivel internacional: "+pasajerosI+" pasajeros",a);	
         a = Destino.jtxa4.getCaretPosition();
@@ -250,7 +250,7 @@ public class TestAviones {
 	RPK8 = x4*y4;	
         
         a = Destino.jtxa5.getCaretPosition();
-        Destino.jtxa5.insert("\n RPK's Nacionales",a);    	
+        Destino.jtxa5.insert("\n\nRPK's Nacionales",a);    	
         a = Destino.jtxa5.getCaretPosition();
         Destino.jtxa5.insert("\nLos RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
         a = Destino.jtxa5.getCaretPosition();
@@ -265,7 +265,7 @@ public class TestAviones {
         if(elarreglo.ValidaDatos()){ 	
 	x1 = elarreglo.DistanciaAno();
         a = Destino.jtxa5.getCaretPosition();     
-        Destino.jtxa5.insert("\nDistancia Internacional",a);	
+        Destino.jtxa5.insert("\n\nDistancia Internacional",a);	
         a = Destino.jtxa5.getCaretPosition();     
         Destino.jtxa5.insert("\nLa distancia total en el anio es: "+x1+" kilometros",a);
         
@@ -286,7 +286,7 @@ public class TestAviones {
             ASK8 = x1*y4;	
             
     a = Destino.jtxa5.getCaretPosition();      
-    Destino.jtxa5.insert("\n\tASK's Internacionales",a);
+    Destino.jtxa5.insert("\n\nASK's Internacionales",a);
     
     a = Destino.jtxa5.getCaretPosition();  
     Destino.jtxa5.insert("\nLos ASK's del 1er. Trimestre son: " +df.format(ASK5),a);
@@ -307,13 +307,13 @@ public class TestAviones {
 	    if(tuarreglo.ValidaDatos()){ 
 	         if(elarreglo.ValidaDatos()){ 	
             try{
-        Factor1 = RPK5/ASK5;
+            Factor1 = RPK5/ASK5;
             Factor2 = RPK6/ASK6;
             Factor3 = RPK7/ASK7;
             Factor4 = RPK8/ASK8;
             
          a = Destino.jtxa5.getCaretPosition();         
-        Destino.jtxa5.insert("\nFactor de Ocupacion Internacional",a);
+        Destino.jtxa5.insert("\n\nFactor de Ocupacion Internacional",a);
          a = Destino.jtxa5.getCaretPosition();         
         Destino.jtxa5.insert("\nEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);	
          a = Destino.jtxa5.getCaretPosition();      
