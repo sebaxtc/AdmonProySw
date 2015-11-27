@@ -8,7 +8,7 @@ public class TestAviones {
     ArregloTrimestre tuarreglo = new ArregloTrimestre();
     ArregloInternacional elarreglo = new ArregloInternacional();
     int dato,opcion,pos,n,x=0,serv,pasajerosN,pasajerosI,tamano,tamano1;
-    DecimalFormat df = new DecimalFormat("0.00000"); 
+    DecimalFormat df = new DecimalFormat("0.000"); 
     String avi,desti;
     double Factor1,Factor2,Factor3,Factor4,RPK1=0,RPK2=0,RPK3=0,RPK4=0,RPK5=0,RPK6=0,RPK7=0,RPK8=0,ASK1=0,ASK2=0,ASK3=0,ASK4=0,ASK5=0,ASK6=0,ASK7=0,ASK8=0,x1,x2,x3,x4,y1,y2,y3,y4;
  
@@ -36,12 +36,15 @@ public class TestAviones {
     }
 
     public int Borrar(){
-    int b;
+    int b,x;
         b = miarreglo.BuscarDato(Destino.tx7.getText());
         if(b == -1)
         return 0;
         else{
-        miarreglo.Borrar(b);
+        x = miarreglo.Borrar(b);
+        if(x == 0)
+        return 0;
+        else
         return 1;
             }
     }  
@@ -98,16 +101,16 @@ public class TestAviones {
 	    Destino.jtxa4.setText("\n Trimestres Nacionales");		
             a = Destino.jtxa4.getCaretPosition();
 	    if(x1 > x2 && x1 > x3 && x1 > x4){
-                Destino.jtxa4.insert("\n El Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + x1 + " pasajeros",a);	        }
+                Destino.jtxa4.insert("\nEl Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + x1 + " pasajeros",a);	        }
             else{ 
 	    if(x2 > x1 && x2 > x3 && x2 > x4){
-            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Abr-May-Jun con: " + x2 + " pasajeros",a);          }
+            Destino.jtxa4.insert("\nEl Trimestre mas concurrido fue el de Abr-May-Jun con: " + x2 + " pasajeros",a);          }
 	    else{	
 	    if(x3 > x1 && x3 > x2 && x3 > x4){
-            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x3 + " pasajeros",a);	   	    }
+            Destino.jtxa4.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x3 + " pasajeros",a);	   	    }
 	    else{
 	    if(x4 > x1 && x4 > x2 && x4 > x3){	
-            Destino.jtxa4.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x4 + " pasajeros",a);		    }
+            Destino.jtxa4.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + x4 + " pasajeros",a);		    }
 	          } } } }//fin del if
     
         if(tuarreglo.ValidaDatos()){ 
@@ -124,15 +127,15 @@ public class TestAviones {
 	RPK3 = x3*y3;
 	RPK4 = x4*y4;
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n RPK's Nacionales",a);    	
+        Destino.jtxa4.insert("\nRPK's Nacionales",a);    	
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n Los RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
+        Destino.jtxa4.insert("\nLos RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n Los RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
+        Destino.jtxa4.insert("\nLos RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n Los RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
+        Destino.jtxa4.insert("\nLos RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
         a = Destino.jtxa4.getCaretPosition();
-	Destino.jtxa4.insert("\n Los RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
+	Destino.jtxa4.insert("\nLos RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
 	}
         
      	if(tuarreglo.ValidaDatos()){ 	
@@ -140,7 +143,7 @@ public class TestAviones {
 	a = Destino.jtxa4.getCaretPosition();
         Destino.jtxa4.insert("\n Distancia Nacional",a);		
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tLa distancia total en el anio es: "+x2+" kilometros",a);	
+        Destino.jtxa4.insert("\nLa distancia total en el anio es: "+x2+" kilometros",a);	
 	}   
         
 	if(miarreglo.ValidaDatos()){ 
@@ -155,15 +158,15 @@ public class TestAviones {
 	ASK3 = x1*y3;
 	ASK4 = x1*y4;
 	a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tASK's Nacionales",a);		
+        Destino.jtxa4.insert("\nASK's Nacionales",a);		
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tLos ASK's del 1er. Trimestre son: " +df.format(ASK1),a);
+        Destino.jtxa4.insert("\nLos ASK's del 1er. Trimestre son: " +df.format(ASK1),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tLos ASK's del 2do. Trimestre son: " +df.format(ASK2),a);
+        Destino.jtxa4.insert("\nLos ASK's del 2do. Trimestre son: " +df.format(ASK2),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tLos ASK's del 3er. Trimestre son: " +df.format(ASK3),a);
+        Destino.jtxa4.insert("\nLos ASK's del 3er. Trimestre son: " +df.format(ASK3),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tLos ASK's del 4to. Trimestre son: " +df.format(ASK4),a);
+        Destino.jtxa4.insert("\nLos ASK's del 4to. Trimestre son: " +df.format(ASK4),a);
 	}}
         
         
@@ -176,19 +179,19 @@ public class TestAviones {
 	Factor3 = RPK3/ASK3;
 	Factor4 = RPK4/ASK4;
         a = Destino.jtxa4.getCaretPosition();
-	Destino.jtxa4.insert("\n\tFactor de Ocupacion Nacional",a);		
+	Destino.jtxa4.insert("\nFactor de Ocupacion Nacional",a);		
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);
+        Destino.jtxa4.insert("\nEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);
+        Destino.jtxa4.insert("\nEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);
+        Destino.jtxa4.insert("\nEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tEl factor de ocupacion del 4to. Trimestre son: " +df.format(Factor4),a);
+        Destino.jtxa4.insert("\nEl factor de ocupacion del 4to. Trimestre son: " +df.format(Factor4),a);
 	}
 	catch(ArithmeticException ae){
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tHay una division entre 0",a);			
+        Destino.jtxa4.insert("\nHay una division entre 0",a);			
 	}
 	}}}
         
@@ -198,11 +201,11 @@ public class TestAviones {
 	pasajerosN = tuarreglo.PasajerosAno();
 	pasajerosI = elarreglo.PasajerosAno();	
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tPasajeros en todo el ano a nivel nacional: "+pasajerosN+" pasajeros",a);	
+        Destino.jtxa4.insert("\nPasajeros en todo el ano a nivel nacional: "+pasajerosN+" pasajeros",a);	
         a = Destino.jtxa4.getCaretPosition();
-        Destino.jtxa4.insert("\n\tPasajeros en todo el ano a nivel internacional: "+pasajerosI+" pasajeros",a);	
+        Destino.jtxa4.insert("\nPasajeros en todo el ano a nivel internacional: "+pasajerosI+" pasajeros",a);	
         a = Destino.jtxa4.getCaretPosition();
-	Destino.jtxa4.insert("\n\tPasajeros en todo el ano: "+(pasajerosN+pasajerosI)+" pasajeros",a);	
+	Destino.jtxa4.insert("\nPasajeros en todo el ano: "+(pasajerosN+pasajerosI)+" pasajeros",a);	
 	}}
         
         
@@ -229,7 +232,7 @@ public class TestAviones {
             Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y3 + " pasajeros",a);	 	}
 	    else{
 	    if(y4 > y1 && y4 > y2 && y4 > y3){	
-            Destino.jtxa5.insert("\n\tEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y4 + " pasajeros",a);	    }
+            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y4 + " pasajeros",a);	    }
 	          } } } }//fin del if
             
         if(elarreglo.ValidaDatos()){ 
@@ -249,22 +252,22 @@ public class TestAviones {
         a = Destino.jtxa5.getCaretPosition();
         Destino.jtxa5.insert("\n RPK's Nacionales",a);    	
         a = Destino.jtxa5.getCaretPosition();
-        Destino.jtxa5.insert("\n Los RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
+        Destino.jtxa5.insert("\nLos RPK's del 1er. Trimestre son: " +df.format(RPK1),a);
         a = Destino.jtxa5.getCaretPosition();
-        Destino.jtxa5.insert("\n Los RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
+        Destino.jtxa5.insert("\nLos RPK's del 2do. Trimestre son: " +df.format(RPK2),a);
         a = Destino.jtxa5.getCaretPosition();
-        Destino.jtxa5.insert("\n Los RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
+        Destino.jtxa5.insert("\nLos RPK's del 3er. Trimestre son: " +df.format(RPK3),a);
         a = Destino.jtxa5.getCaretPosition();
-	Destino.jtxa5.insert("\n Los RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
+	Destino.jtxa5.insert("\nLos RPK's del 4to. Trimestre son: " +df.format(RPK4),a);
             }  
 
         
         if(elarreglo.ValidaDatos()){ 	
 	x1 = elarreglo.DistanciaAno();
         a = Destino.jtxa5.getCaretPosition();     
-        Destino.jtxa5.insert("\n\tDistancia Internacional",a);	
+        Destino.jtxa5.insert("\nDistancia Internacional",a);	
         a = Destino.jtxa5.getCaretPosition();     
-        Destino.jtxa5.insert("\n\tLa distancia total en el anio es: "+x1+" kilometros",a);
+        Destino.jtxa5.insert("\nLa distancia total en el anio es: "+x1+" kilometros",a);
         
 	}
         
@@ -286,16 +289,16 @@ public class TestAviones {
     Destino.jtxa5.insert("\n\tASK's Internacionales",a);
     
     a = Destino.jtxa5.getCaretPosition();  
-    Destino.jtxa5.insert("\n\tLos ASK's del 1er. Trimestre son: " +df.format(ASK5),a);
+    Destino.jtxa5.insert("\nLos ASK's del 1er. Trimestre son: " +df.format(ASK5),a);
     
     a = Destino.jtxa5.getCaretPosition();  
-    Destino.jtxa5.insert("\n\tLos ASK's del 2do. Trimestre son: " +df.format(ASK6),a);	
+    Destino.jtxa5.insert("\nLos ASK's del 2do. Trimestre son: " +df.format(ASK6),a);	
 
     a = Destino.jtxa5.getCaretPosition();  
-    Destino.jtxa5.insert("\n\tLos ASK's del 3er. Trimestre son: " +df.format(ASK7),a );	
+    Destino.jtxa5.insert("\nLos ASK's del 3er. Trimestre son: " +df.format(ASK7),a );	
     
     a = Destino.jtxa5.getCaretPosition();  
-    Destino.jtxa5.insert("\n\tLos ASK's del 4to. Trimestre son: " +df.format(ASK8),a);		
+    Destino.jtxa5.insert("\nLos ASK's del 4to. Trimestre son: " +df.format(ASK8),a);		
 	
 	}}
         
@@ -310,21 +313,21 @@ public class TestAviones {
             Factor4 = RPK8/ASK8;
             
          a = Destino.jtxa5.getCaretPosition();         
-        Destino.jtxa5.insert("\n\tFactor de Ocupacion Internacional",a);
+        Destino.jtxa5.insert("\nFactor de Ocupacion Internacional",a);
          a = Destino.jtxa5.getCaretPosition();         
-        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);	
+        Destino.jtxa5.insert("\nEl factor de ocupacion del 1er. Trimestre son: " +df.format(Factor1),a);	
          a = Destino.jtxa5.getCaretPosition();      
-        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);	
+        Destino.jtxa5.insert("\nEl factor de ocupacion del 2do. Trimestre son: " +df.format(Factor2),a);	
          a = Destino.jtxa5.getCaretPosition();        
-       Destino.jtxa5.insert("\n\tEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);	
+       Destino.jtxa5.insert("\nEl factor de ocupacion del 3er. Trimestre son: " +df.format(Factor3),a);	
          a = Destino.jtxa5.getCaretPosition();        
-        Destino.jtxa5.insert("\n\tEl factor de ocupacion del 4to. Trimestre son: "+df.format(Factor4),a);	
+        Destino.jtxa5.insert("\nEl factor de ocupacion del 4to. Trimestre son: "+df.format(Factor4),a);	
         
             }
             catch(ArithmeticException ae){
         
         a = Destino.jtxa5.getCaretPosition();         
-        Destino.jtxa5.insert("\n\tHay una division entre 0",a);		
+        Destino.jtxa5.insert("\nHay una division entre 0",a);		
             }	    
             }}}
         
