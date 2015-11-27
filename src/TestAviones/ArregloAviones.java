@@ -71,12 +71,22 @@ public int BuscarDato(String avi){
  }
 
 //Borra Un elemento del arreglo
-public void Borrar(int pos){
+public int Borrar(int pos){
     Aviones aux;
-	
-	aux = arreglo[pos];
+
+    aux = arreglo[pos];
+    if(aux.servicio == 0)
+    return 0;
+    else{
+    aux.servicio = aux.servicio-1;
+    if(aux.servicio == 0){
     arreglo[pos] = arreglo[indice];
     indice--;
+    return 1;
+                         }
+    return 1;
+        }
+
 }
 
 public void Imprime(){
