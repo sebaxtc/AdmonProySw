@@ -227,9 +227,9 @@ public void GeneraNombres(){
 		  TrimestreNacional Tri = new TrimestreNacional();
 		  arreglo[i] = Tri;
 		  arreglo[i].setDestino(Nom_Dest[i]);
-		  pasajeros = (int)(Math.random()*(1000000-500000))+500000;
+		  pasajeros = (int)(Math.random()*(10-50))+50;
 		  arreglo[i].setPasajeros(pasajeros);
-		  distancia = (int)(Math.random()*(2000-1000))+1000;
+		  distancia = (int)(Math.random()*(20-10))+10;
                   arreglo[i].setDistancia(distancia);
 		  trimestre = (int)(Math.random()*(4-1))+1;
                   arreglo[i].setTrimestre(trimestre);
