@@ -57,10 +57,10 @@ int i,a,b;
 	else{
              Destino.jtxa2.setText("");
              a = Destino.jtxa2.getCaretPosition();
-             Destino.jtxa2.insert("\n Trimestre 1: Enero-Febrero-Marzo.\n Trimestre 2: Abril-Mayo-Junio.\n Trimestre 3: Julio-Agosto-Septiembre.\n Trimestre 4: Octubre-Noviembre-Diciembre.",a); 
+             Destino.jtxa2.insert("\nTrimestre 1: Enero-Febrero-Marzo.\nTrimestre 2: Abril-Mayo-Junio.\nTrimestre 3: Julio-Agosto-Septiembre.\nTrimestre 4: Octubre-Noviembre-Diciembre.\n",a); 
              for(i=0 ; i <= indice ; i++){
                 b = Destino.jtxa2.getCaretPosition();
-                Destino.jtxa2.insert("\n Trimestre: " +arreglo[i].getTrimestre()+ "\n Destino: "+arreglo[i].getDestino()+ "\n Distancia de Mexico a " +arreglo[i].getDestino()+ ":  " +arreglo[i].getDistancia()+ "\n Pasajeros con destino a " +arreglo[i].getDestino()+ " en el Trimestre " +arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros(), b);                             
+                Destino.jtxa2.insert("\n\nTrimestre: " +arreglo[i].getTrimestre()+ "\nDestino: "+arreglo[i].getDestino()+ "\nDistancia de Mexico a " +arreglo[i].getDestino()+ ":  " +arreglo[i].getDistancia()+ "\nPasajeros con destino a " +arreglo[i].getDestino()+ " en el Trimestre " +arreglo[i].getTrimestre()+": "+arreglo[i].getPasajeros(), b);                             
 					 }
             }
 }
