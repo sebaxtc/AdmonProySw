@@ -219,16 +219,16 @@ public int DistanciaTrimestreCuatro(){
 public void GeneraNombres(){ 
          int i,pasajeros,distancia,trimestre;
 	 String destino;
-         String Destinos[]={"Toio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Osaka","Toronto","Monaco","Singapur","Camboya","Sao Paolo","Peru","Caracas","Irlanda","Orlando","Miami","Hawai"};	 
+         String Destinos[]={"Tokio","Chicago","Berlin","Holanda","Beijing","Moscu","Shangai","Sydney","Montreal","Madrid","Pittsburgh","Osaka","Toronto","Monaco","Singapur","Camboya","Sao Paolo","Peru","Caracas","Irlanda","Orlando","Miami","Hawai"};	 
          
 		for(i=0 ; i < 23 ; i++){
 		  TrimestreInternacional Tri = new TrimestreInternacional();
 		  arreglo[i] = Tri;
 		  destino = Destinos[i];
 		  arreglo[i].setDestino(destino);
-		  pasajeros = (int)(Math.random()*(700000-300000))+300000;
+		  pasajeros = (int)(Math.random()*(70-30))+30;
 		  arreglo[i].setPasajeros(pasajeros);
-		  distancia = (int)(Math.random()*(20000-10000))+10000;
+		  distancia = (int)(Math.random()*(20-10))+10;
           arreglo[i].setDistancia(distancia);
 		  trimestre = (int)(Math.random()*(4-1))+1;
           arreglo[i].setTrimestre(trimestre);
