@@ -208,6 +208,7 @@ public class TestAviones {
 	Destino.jtxa4.insert("\nPasajeros en todo el ano: "+(pasajerosN+pasajerosI)+" pasajeros",a);	
 	}}
         
+                System.out.println(Destino.jtxa4.getText());
         
         }//FIN DE ESTADISTICAS
         
@@ -223,7 +224,8 @@ public class TestAviones {
              a=Destino.jtxa5.getCaretPosition();
 	    if(y1 > y2 && y1 > y3 && y1 > y4){
                
-            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + y1 + " pasajeros",a);	    }
+            Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Ene-Feb-Mar con: " + y1 + " pasajeros",a);
+             }
             else{ 
 	    if(y2 > y1 && y2 > y3 && y2 > y4){
             Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Abr-May-Jun con: " + y2 + " pasajeros",a);      }
@@ -234,6 +236,8 @@ public class TestAviones {
 	    if(y4 > y1 && y4 > y2 && y4 > y3){	
             Destino.jtxa5.insert("\nEl Trimestre mas concurrido fue el de Jul-Ago-Sep con: " + y4 + " pasajeros",a);	    }
 	          } } } }//fin del if
+            
+           
             
         if(elarreglo.ValidaDatos()){ 
 	x1 = elarreglo.PasajerosTrimestreUno();
@@ -331,6 +335,7 @@ public class TestAviones {
             }	    
             }}}
         
+         System.out.println(Destino.jtxa5.getText());
         
         
         }
